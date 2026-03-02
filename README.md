@@ -28,25 +28,25 @@ Baileys is a fork from github https://github.com/Nted3xec/baileys
 Tag/Label Member Grop
 
 ```javascript
-await ourin.setLabelGroup(jid, string)
+await amane.setLabelGroup(jid, string)
 ```
 ---
 ### Delay
 Sleep code ( hehe )
 
 ```javascript
-await ourin.delay(seconds) // ex. 3 ( 3 seconds )
+await amane.delay(seconds) // ex. 3 ( 3 seconds )
 // example
-await ourin.delay(3)
+await amane.delay(3)
 ```
 ---
 ### React Message
 Send Reaction into the Message
 
 ```javascript
-await ourin.react(m, emoji) 
+await amane.react(m, emoji) 
 // Example 
-await ourin.react(m, "😚") 
+await amane.react(m, "😚") 
 ```
 ---
 ### Delete React Message
@@ -54,14 +54,14 @@ Delete Reaction into the Message
 
 ```javascript
 // Example 
-await ourin.unreact(m) 
+await amane.unreact(m) 
 ```
 ---
 ### Check ID Channel / Newsletter / Saluran
 Get ID Channel From Url
 
 ```javascript
-await ourin.cekIDSaluran(url)
+await amane.cekIDSaluran(url)
 ```
 Result JSON
 ```json
@@ -81,24 +81,24 @@ Result JSON
 Just one line, not use array, just string with space " "
 
 ```javascript
-await ourin.newsletterMultipleFollow(jids)
+await amane.newsletterMultipleFollow(jids)
 // Example
-await ourin.newsletterMultipleFollow("120xxxxxxx@newsletter 120xxxxxxxxx@newsletter 120xxxxxxx@newsletter")
+await amane.newsletterMultipleFollow("120xxxxxxx@newsletter 120xxxxxxxxx@newsletter 120xxxxxxx@newsletter")
 ```
 ---
 ### Check banned number
 You can see the status of blocked numbers here 
 
 ```javascript
-ourin.checkBanned(jid)
+amane.checkBanned(jid)
 ```
 ---
 ### Edit Message
 Edit your previously sent message
 ```js
-await ourin.edit(m, newText)
+await amane.edit(m, newText)
 // Example
-await ourin.edit(m, "this is edited message")
+await amane.edit(m, "this is edited message")
 ```
 Notes
 - Only works for messages sent by yourself
@@ -107,9 +107,9 @@ Notes
 ### Delete / Revoke Message
 Delete or revoke a message
 ```js
-await ourin.del(m)
+await amane.del(m)
 // Example
-await ourin.del(m)
+await amane.del(m)
 ```
 
 Notes
@@ -123,7 +123,7 @@ Detect message type from incoming message object.
 ```js
 ourin.detect(m)
 // Example
-const type = ourin.detect(m)
+const type = amane.detect(m)
 if (type === 'image') {
     // handle image message
 }
@@ -160,14 +160,14 @@ Status Mention Group & Private Message
 Send Status Mention Group/Private Chat
 
 ```javascript
-await ourin.sendStatusMention(content, jid);
+await amane.sendStatusMention(content, jid);
 ```
 
 ### Status Group Message V2
 Send Group Status With Version 2 
 
 ```javascript
-await ourin.sendMessage(jid, {
+await amane.sendMessage(jid, {
      groupStatusMessage: {
           text: "Hello World"
      }
@@ -178,7 +178,7 @@ await ourin.sendMessage(jid, {
 Send multiple images in a single album message:
 
 ```javascript
-await ourin.sendMessage(jid, { 
+await amane.sendMessage(jid, { 
     albumMessage: [
         { image: buffer, caption: "Foto pertama" },
         { image: { url: "URL IMAGE" }, caption: "Foto kedua" }
@@ -190,7 +190,7 @@ await ourin.sendMessage(jid, {
 Create and send WhatsApp event invitations:
 
 ```javascript
-await ourin.sendMessage(jid, { 
+await amane.sendMessage(jid, { 
     eventMessage: { 
         isCanceled: false, 
         name: "Hello World", 
@@ -212,7 +212,7 @@ await ourin.sendMessage(jid, {
 Display poll results with vote counts:
 
 ```javascript
-await ourin.sendMessage(jid, { 
+await amane.sendMessage(jid, { 
     pollResultMessage: { 
         name: "Hello World", 
         pollVotes: [
@@ -233,7 +233,7 @@ await ourin.sendMessage(jid, {
 Send basic interactive messages with copy button functionality:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await amane.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
@@ -256,11 +256,11 @@ await ourin.sendMessage(jid, {
 Send interactive messages with buttons, copy actions, and native flow features:
 
 ```javascript
-await ourin.sendMessage(jid, {    
+await amane.sendMessage(jid, {    
     interactiveMessage: {      
         header: "Hello World",
         title: "Hello World",      
-        footer: "OURIN MD",      
+        footer: "AMANE",      
         image: { url: "https://example.com/image.jpg" },      
         nativeFlowMessage: {        
             messageParamsJson: JSON.stringify({          
@@ -335,11 +335,11 @@ await ourin.sendMessage(jid, {
 Send interactive messages with thumbnail image and copy button:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await amane.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
-        footer: "OURIN MD",
+        footer: "AMANE",
         image: { url: "https://example.com/image.jpg" },
         buttons: [
             {
@@ -359,7 +359,7 @@ await ourin.sendMessage(jid, {
 Send product catalog messages with buttons and merchant information:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await amane.sendMessage(jid, {
     productMessage: {
         title: "Produk Contoh",
         description: "Ini adalah deskripsi produk",
@@ -388,11 +388,11 @@ await ourin.sendMessage(jid, {
 Send interactive messages with document from buffer (file system) - **Note: Documents only support buffer**:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await amane.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
-        footer: "OURIN MD",
+        footer: "AMANE",
         document: fs.readFileSync("./package.json"),
         mimetype: "application/pdf",
         fileName: "saweitt.pdf",
@@ -430,7 +430,7 @@ await ourin.sendMessage(jid, {
 Send interactive messages with document from buffer (file system) without contextInfo and externalAdReply - **Note: Documents only support buffer**:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await amane.sendMessage(jid, {
     interactiveMessage: {
         header: "Hello World",
         title: "Hello World",
@@ -460,7 +460,7 @@ Send payment request messages with custom background and sticker:
 let quotedType = m.quoted?.mtype || '';
 let quotedContent = JSON.stringify({ [quotedType]: m.quoted }, null, 2);
 
-await ourin.sendMessage(jid, {
+await amane.sendMessage(jid, {
     requestPaymentMessage: {
         currency: "IDR",
         amount: 10000000,
@@ -484,7 +484,7 @@ await ourin.sendMessage(jid, {
 Send a carousel message with multiple cards:
 
 ```javascript
-await ourin.sendMessage(
+await amane.sendMessage(
     jid,
     {
         text: 'Body Message',
@@ -545,10 +545,10 @@ await ourin.sendMessage(
 Send a sticker pack with multiple stickers in one message:
 
 ```javascript
-await ourin.sendMessage(jid, {
+await amane.sendMessage(jid, {
     stickerPack: {
         name: "My Sticker Pack",
-        publisher: "OURIN MD",
+        publisher: "SHIKIMORI MD",
         description: "Custom sticker pack",
         cover: { url: "https://example.com/cover.png" },
         stickers: [
@@ -577,7 +577,7 @@ Lightweight media processing functions built directly into the socket. Uses `sha
 Fast image resize with aspect ratio preserved
 
 ```javascript
-const resized = await ourin.resize(buffer, 200, 200)
+const resized = await amane.resize(buffer, 200, 200)
 ```
 ---
 ### Convert
