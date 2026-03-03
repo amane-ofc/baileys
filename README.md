@@ -10,8 +10,6 @@ The latest updated Baileys WhatsApp supports following channels, and doesn't exi
 
 WhatsApp Baileys updates the jid to lid, payment/interactiveMessage/viewOnceMessage buttons and others, suitable for those of you who have a script project that you want 
 
-Baileys is a fork from github https://github.com/Nted3xec/baileys
-
 ---
 
 ### Features improved by the owner
