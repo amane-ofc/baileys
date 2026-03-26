@@ -1,5 +1,5 @@
 {
-    "name": "dinzid04/baileys",
+    "name": "amane-ofc/baileys",
     "version": "0.0.5",
     "description": "Baileys Modification for whatsapp",
     "keywords": [
@@ -7,12 +7,12 @@
         "Bot Whatsapp",
         "DinzID"
     ],
-    "homepage": "https://github.com/dinzid04/DinzBaileys.git",
+    "homepage": "https://github.com/amane-ofc/baileys.git",
     "repository": {
-        "url": "https://github.com/dinzid04/DinzBaileys.git"
+        "url": "https://github.com/amane-ofc/baileys.git"
     },
     "license": "MIT",
-    "author": "DinzID",
+    "author": "AmaneOfc",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
     "files": [
